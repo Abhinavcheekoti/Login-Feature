@@ -3,8 +3,7 @@ var router = express.Router();
 var userModel = require("../schemas/user")
 
 router.get("/",(req,res,next)=>{
-    console.log("In signup");
-    
+    res.render('layout2');  
 })
 router.post("/",(req,res,next)=>{
     let userName = req.body.userName;
@@ -13,13 +12,18 @@ router.post("/",(req,res,next)=>{
         name:userName
     },function(err,data){
         if(err) console.log("Error!");
-        if(data.passwd == passwd)
-        {
-            res.render("home",{name:userName});
-        }
+        if(data[0].passwd == passwd)
+            {
+                res.render("home",{name:userName});
+            }
+        else
+            {
+                console.log("Redirecting, passwds don't match !");
+                res.redirect('/sign-up');
+            }
     })
 
-
+    
 })
 
 

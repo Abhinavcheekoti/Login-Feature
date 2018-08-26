@@ -4,7 +4,8 @@ var Schema = mongoose.Schema;
 var userDataSchema = new Schema({
     name : String,
     id: String,
-    roomNo: String
+    roomNo: String,
+    passwd: String
 })
 
 var model = mongoose.model("users",userDataSchema);

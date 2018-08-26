@@ -11,10 +11,13 @@ router.post("/",function(req,res,next){
     let name = req.body.name;
     let id = req.body.id;
     let roomNo = req.body.roomno;
-    userModel.create({
+    let password = req.body.passwd;
+    console.log(password);
+      userModel.create({
         name : name,
         id : id,
-        roomNo : roomNo
+        roomNo : roomNo,
+        passwd : password
   },function(err,data){
     if(err) console.log(err);
     else console.log("Saved !");
@@ -23,3 +26,5 @@ router.post("/",function(req,res,next){
   })
 
 module.exports = router;
+
+

@@ -1,0 +1,14 @@
+doctype html
+html
+    head
+        h1 Fill the form to login
+
+    body
+        form(action='/sign-up' id = "submit2_form" method="post")
+            ul
+                li Name
+                input(type="text" name="userName" label="id")
+                li Password
+                input(type="password" name="passwd" label="password")
+
+    button(form="submit2_form" value="Submit" type="Submit") Submit
