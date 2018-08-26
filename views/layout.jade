@@ -1,0 +1,18 @@
+doctype html
+html
+  head
+    title Application form
+    h1 Fill your Details.
+
+  body(style="margin-left:250px;margin-top:250px;")
+    form(action='/sign-in' id = "submit_form" method="post")  
+      ul  
+        li Id 
+        input(type="text" name="id" label = "id" )
+        li Name 
+        input(type="text" name = "name" label = "name")
+        li Room Number 
+        input(type="text" name = "roomno" label = "roomno")
+      
+  button(form= "submit_form" value="Submit" type="submit" ) Submit    
+
