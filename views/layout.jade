@@ -1,10 +1,58 @@
 doctype html
 html
   head
-    title Application form
-    h1 Fill your Details.
+    style.
+      body{
+        background-color: gray;
+        background-repeat: no-repeat;
+        background-size:cover;
+      }
+      .h1{
+        color : black;
+        font-size : 80px; 
+        margin-left : 300px;
+        margin-top : 100px;
+        font-family: "Arial", sans-serif;
+        font-weight:800;
+      }
 
-  body(style="margin-left:250px;margin-top:250px;")
+      ul {
+            margin-left:500px;
+            padding: 20px;  
+          }
+      .button {
+                width:140px;
+                height:50px;
+                border:none;
+                text-align:center;
+                cursor:pointer;
+                position:relative;
+                box-sizing:border-box;
+                overflow:hidden;
+                margin:40px 0 40px 750px;
+                font-size:25px;
+                color:black;
+                background:transparent;
+                transition: all ease-in-out 0.2s;
+              }
+      .button:hover {
+        background:black;
+        color:white;
+        transform:scale(1.1,1.1);
+      }
+      input {
+        height: 35px;
+        color: black;
+        background: rgb(256.256,256,200);
+        font-size: 20px;
+      }
+      li {
+        font-size:25px;
+      }
+    title Application form
+    h1.h1 Sign-Up
+
+  body
     form(action='/sign-in' id = "submit_form" method="post")  
       ul  
         li Id 
@@ -16,5 +64,5 @@ html
         li Password
         input(type="password" name = "passwd" label = "password")
       
-  button(form= "submit_form" value="Submit" type="submit" ) Submit    
+  button.button(form= "submit_form" value="Submit" type="submit" ) Submit    
 

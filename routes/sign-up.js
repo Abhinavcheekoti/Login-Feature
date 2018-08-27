@@ -14,7 +14,7 @@ router.post("/",(req,res,next)=>{
         if(err) console.log("Error!");
         if(data[0].passwd == passwd)
             {
-                res.render("home",{name:userName});
+                res.render("home",{name:userName,roomNo:data[0].roomNo});
             }
         else
             {

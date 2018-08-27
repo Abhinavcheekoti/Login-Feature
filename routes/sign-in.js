@@ -23,7 +23,7 @@ router.post("/",function(req,res,next){
     else console.log("Saved !");
   })
     res.redirect("/sign-up");
-  })
+  });
 
 module.exports = router;
 
